@@ -3,7 +3,7 @@ import time
 import pyautogui as auto
 import threading
 from . import misc
-from .constants import Constants
+from .constants import Constants, Params
 
 
 class WatcherBase(ABC):
@@ -62,4 +62,4 @@ class WatcherBanChampion(WatcherFindAndClickBase):
         # ban = misc.locate_on_screen(Constants.RES_TITLE_BAN)
         # if ban is not None:
         super()._found_res(x, y)  # click on find ban bar
-        auto.typewrite("morgana")  # test wip
+        auto.typewrite(Params.BAN)  # test wip
